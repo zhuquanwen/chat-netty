@@ -2,6 +2,8 @@ package com.zqw.chat.common.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @Author: zhuquanwen
  * @Description:
@@ -9,9 +11,10 @@ import lombok.Data;
  * @Modified:
  **/
 @Data
-public class Message {
+public class Message implements Serializable {
     private String id;
     private String from;
     private String to;
     private String roomId;
+    private Object msg;
 }
